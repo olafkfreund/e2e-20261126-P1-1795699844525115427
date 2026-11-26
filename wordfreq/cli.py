@@ -57,8 +57,12 @@ def _build_parser() -> argparse.ArgumentParser:
         default="-",
         help="file to read; reads stdin when omitted or '-'",
     )
-    parser.add_argument("--top", type=int, default=None, help="show only the N most frequent words")
-    parser.add_argument("--min-len", type=int, default=1, help="ignore words shorter than N characters")
+    parser.add_argument(
+        "--top", type=int, default=None, help="show only the N most frequent words"
+    )
+    parser.add_argument(
+        "--min-len", type=int, default=1, help="ignore words shorter than N characters"
+    )
     parser.add_argument(
         "--case-sensitive",
         action="store_true",
